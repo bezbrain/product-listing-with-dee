@@ -3,3 +3,17 @@
   width: 100%;
   border: 2px solid black;
 }
+.summaryCon {
+  padding: 50px 20px;
+  background-color: rgb(231, 255, 233);
+}
+.summaryCon h2 {
+  text-align: center;
+  color: #009000;
+  font-size: 27px;
+}
+.summaryCon span {
+  color: #009000;
+  font-weight: 700;
+  text-transform: capitalize;
+}
