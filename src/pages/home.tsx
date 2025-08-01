@@ -6,13 +6,16 @@ import logo from "../assets/logo-copy.png";
 const Home = () => {
   return (
     <div>
-      <div className="header">
-        <div className="logoCon">
-          <Link to="/">
-            {" "}
-            <img className="logo" src={logo} alt="logo" />
-          </Link>
+      <div className="headerCon">
+        <div className="header">
+          <div className="logoCon">
+            <Link to="/">
+              {" "}
+              <img className="logo" src={logo} alt="logo" />
+            </Link>
+          </div>
         </div>
+        <div className="headerLine"></div>
       </div>
       <div className="summaryCon">
         <h2>

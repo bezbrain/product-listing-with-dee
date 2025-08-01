@@ -6,13 +6,16 @@ import logo from "../assets/logo-copy.png";
 const Products = () => {
   return (
     <div>
-      <div className="header">
-        <div className="logoCon">
-          <Link to="/">
-            {" "}
-            <img className="logo" src={logo} alt="logo" />
-          </Link>
+      <div className="headerCon">
+        <div className="header">
+          <div className="logoCon">
+            <Link to="/">
+              {" "}
+              <img className="logo" src={logo} alt="logo" />
+            </Link>
+          </div>
         </div>
+        <div className="headerLine"></div>
       </div>
 
       <Link to="/">Go to Home Page</Link>

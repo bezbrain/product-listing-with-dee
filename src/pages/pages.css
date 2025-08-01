@@ -1,8 +1,25 @@
-.header {
-  height: 90px;
-
+.headerCon {
+  height: 80px;
   width: 100%;
-  border: 2px solid black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 500;
+  background-color: #ffffff;
+  line-height: 0;
+}
+
+.header {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  /* border: 0.5px solid red; */
+}
+.headerLine {
+  border: 0.5px solid rgb(184, 184, 184);
 }
 .logoCon {
   height: 100%;
@@ -22,6 +39,7 @@
   text-align: center;
   color: #009000;
   font-size: 27px;
+  margin-top: 50px;
 }
 .summaryCon span {
   color: #009000;
