@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "./pages.css";
+import { FiMenu } from "react-icons/fi";
 
 import logo from "../assets/logo-copy.png";
 
@@ -13,6 +14,10 @@ const Home = () => {
               {" "}
               <img className="logo" src={logo} alt="logo" />
             </Link>
+          </div>
+          <button className="btn">Contact us</button>
+          <div className="menuCon">
+            <FiMenu size={30} />
           </div>
         </div>
         <div className="headerLine"></div>
