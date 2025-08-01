@@ -8,14 +8,11 @@ const Home = () => {
     <div>
       <div className="header">
         <div className="logoCon">
-          <Link to="/products">
+          <Link to="/">
             {" "}
             <img className="logo" src={logo} alt="logo" />
           </Link>
         </div>
-        {/* <div className="logoCon">
-          <img className="logo" src={logo} alt="logo" />
-        </div> */}
       </div>
       <div className="summaryCon">
         <h2>
@@ -38,7 +35,7 @@ const Home = () => {
         </p>
       </div>
 
-      {/* <Link to="/products">Go to Product Page</Link> */}
+      <Link to="/products">Go to Product Page</Link>
     </div>
   );
 };
