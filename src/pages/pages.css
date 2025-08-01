@@ -42,6 +42,10 @@
   font-size: 18px;
   color: #ffffff;
 }
+.menuCon:hover {
+  transition: 1s;
+  transform: rotate(180deg);
+}
 .headerLine {
   border: 0.5px solid rgb(184, 184, 184);
 }
