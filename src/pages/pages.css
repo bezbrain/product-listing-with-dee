@@ -1,6 +1,5 @@
 .header {
-  height: 300px;
-  width: 300px;
-  background-color: aquamarine;
-  /* border-radius: 50%; */
+  height: 70px;
+  width: 100%;
+  border: 2px solid black;
 }
