@@ -15,9 +15,11 @@ const Products = () => {
               <img className="logo" src={logo} alt="logo" />
             </Link>
           </div>
-          <button className="btn">Contact us</button>
-          <div className="menuCon">
-            <FiMenu size={30} />
+          <div className="headItem">
+            <button className="btn">Contact us</button>
+            <div className="menuCon">
+              <FiMenu size={30} />
+            </div>
           </div>
         </div>
         <div className="headerLine"></div>

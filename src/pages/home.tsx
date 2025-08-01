@@ -15,17 +15,19 @@ const Home = () => {
               <img className="logo" src={logo} alt="logo" />
             </Link>
           </div>
-          <button className="btn">Contact us</button>
-          <div className="menuCon">
-            <FiMenu size={30} />
+          <div className="headItem">
+            <button className="btn">Contact us</button>
+            <div className="menuCon">
+              <FiMenu size={30} />
+            </div>
           </div>
         </div>
         <div className="headerLine"></div>
       </div>
       <div className="summaryCon">
         <h2>
-          Welcome to Precisious Auto Sales <br /> where Luxury, Reliability, and
-          Affordability meet.
+          Welcome to Precisious Auto Sales <br />
+          where Luxury, Reliability, and Affordability meet.
         </h2>
         <p>
           At <span>Precisious Auto Sales</span> , we are committed to providing
