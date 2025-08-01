@@ -1,10 +1,22 @@
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./pages.css";
+
+import logo from "../assets/logo-copy.png";
 
 const Home = () => {
   return (
     <div>
-      <div className="header"></div>
+      <div className="header">
+        <div className="logoCon">
+          <Link to="/products">
+            {" "}
+            <img className="logo" src={logo} alt="logo" />
+          </Link>
+        </div>
+        {/* <div className="logoCon">
+          <img className="logo" src={logo} alt="logo" />
+        </div> */}
+      </div>
       <div className="summaryCon">
         <h2>
           Welcome to Precisious Auto Sales <br /> where Luxury, Reliability, and
@@ -25,6 +37,7 @@ const Home = () => {
           advantage of our exceptional offers.
         </p>
       </div>
+
       {/* <Link to="/products">Go to Product Page</Link> */}
     </div>
   );
