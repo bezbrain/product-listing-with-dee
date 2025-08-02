@@ -45,9 +45,14 @@ const Home = () => {
           advantage of our exceptional offers.
         </p>
       </div>
-      <div>
-        <div className="produtCon">
-          <img className="product" src={backimg} alt="" />
+      <div className="displayImg">
+        <div className="imgCon">
+          <img className="img" src={backimg} alt="" />
+        </div>
+        <div className="imgText">
+          <p>
+            we <br /> offer <br /> great <br /> deal
+          </p>
         </div>
       </div>
       {/* <Link to="/products">Go to Product Page</Link> */}
