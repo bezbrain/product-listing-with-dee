@@ -3,6 +3,7 @@ import "./pages.css";
 import { FiMenu } from "react-icons/fi";
 
 import logo from "../assets/logo-copy.png";
+import backimg from "../assets/images/background.png";
 
 const Home = () => {
   return (
@@ -44,8 +45,10 @@ const Home = () => {
           advantage of our exceptional offers.
         </p>
       </div>
-      <div className="produtCon">
-        <div className="product"></div>
+      <div>
+        <div className="produtCon">
+          <img className="product" src={backimg} alt="" />
+        </div>
       </div>
       {/* <Link to="/products">Go to Product Page</Link> */}
     </div>
