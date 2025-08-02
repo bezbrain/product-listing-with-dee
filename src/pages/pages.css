@@ -64,3 +64,14 @@
   font-weight: 700;
   text-transform: capitalize;
 }
+.produtCon {
+  height: 500px;
+  width: 100%;
+}
+.product {
+  background-image: url("../assets/images/background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}

@@ -44,8 +44,10 @@ const Home = () => {
           advantage of our exceptional offers.
         </p>
       </div>
-
-      <Link to="/products">Go to Product Page</Link>
+      <div className="produtCon">
+        <div className="product"></div>
+      </div>
+      {/* <Link to="/products">Go to Product Page</Link> */}
     </div>
   );
 };
