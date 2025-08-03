@@ -108,5 +108,25 @@
 }
 /* end of display img */
 .service {
-  /* background-color: #1a1a1a; */
+  padding: 20px;
+  background-color: #c0c0c0;
+}
+.service h1 {
+  color: #009000;
+}
+.service span {
+  color: #009000;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.service ul {
+  margin-left: -20px;
+  margin-bottom: 30px;
+  margin-top: -15px;
+}
+.goal {
+  font-style: italic;
+  font-size: 17px;
+  font-weight: 600;
+  color: #009000;
 }
