@@ -51,7 +51,9 @@ const Home = () => {
         </div>
         <div className="imgText">
           <p>
-            we <br /> offer <br /> great <br /> deal
+            we <br /> <span>offer</span> <br />
+            great <br />
+            <span>deal</span>
           </p>
         </div>
       </div>
