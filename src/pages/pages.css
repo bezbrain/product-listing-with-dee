@@ -130,3 +130,39 @@
   font-weight: 600;
   color: #009000;
 }
+/* end of service */
+.about {
+  background-color: #2f3b2f;
+  padding: 20px;
+}
+.about h1 {
+  color: #009000;
+}
+.about p {
+  color: #ffffff;
+  font-size: 17px;
+}
+/* end of about */
+.contactUs {
+  padding: 20px;
+}
+.address {
+  font-style: italic;
+  opacity: 0.6;
+  margin-bottom: 20px;
+}
+.contactUs a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  color: #000000;
+  text-decoration: none;
+  opacity: 0.7;
+  margin-top: -25px;
+}
+.copywrite {
+  text-align: center;
+  font-style: italic;
+  opacity: 0.5;
+}

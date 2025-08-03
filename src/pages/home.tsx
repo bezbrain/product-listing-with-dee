@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import "./pages.css";
 import { FiMenu } from "react-icons/fi";
+import { IoLogoWhatsapp } from "react-icons/io";
+import { MdEmail } from "react-icons/md";
+import { SiTiktok } from "react-icons/si";
 
 import logo from "../assets/logo-copy.png";
 import backimg from "../assets/images/background.png";
@@ -33,7 +36,7 @@ const Home = () => {
         </h2>
         <p>
           At <span>Precisious Auto Sales</span> , we are committed to providing
-          the public with <span>dependable, high-quality luxury vehicles</span>{" "}
+          the public with <span>dependable, high quality luxury vehicles</span>{" "}
           at competitive prices all with a focus on convenience and customer
           satisfaction. We offer flexible financing options as well as the
           ability to pay in full, making the buying process seamless for every
@@ -70,7 +73,7 @@ const Home = () => {
         <h1>Our Service</h1>
         <p>
           At Precisious, we make purchasing a vehicle simple, transparent, and
-          customer-focused. Our process begins once a reservation fee or down
+          customer focused. Our process begins once a reservation fee or down
           payment is made. For full payments, a{" "}
           <span>70% deposit is collected upfront </span> , with the remaining
           balance due upon finalization.
@@ -99,15 +102,61 @@ const Home = () => {
           it inspected by your mechanic. If you choose to keep it, you’ll sign
           the final documents and either complete the payment or proceed with
           your financing agreement. If you decide not to keep the vehicle within
-          the two-day test period, simply notify us, and our courier will
+          the two day test period, simply notify us, and our courier will
           arrange pickup. Your deposit will be refunded.{" "}
         </p>
         <p className="goal">
-          Our goal is to ensure a smooth, convenient, and risk-free car buying
+          Our goal is to ensure a smooth, convenient, and risk free car buying
           experience.
         </p>
       </div>
       {/* end of our service */}
+      <div className="about">
+        <h1>About Us</h1>
+        <p>
+          Precisious is a trusted automotive company specializing in clean title
+          vehicles, free from mechanical or structural issues. Our inventory
+          primarily consists of bank-seized cars, offered at competitive prices
+          based on the outstanding amounts owed to the bank.
+        </p>
+        <p>
+          We are committed to transparency and customer satisfaction. Every
+          customer is provided with a two day test drive period to evaluate the
+          vehicle or have it inspected by their own mechanic. Additionally, we
+          offer a two-year warranty on every vehicle purchased from us, ensuring
+          peace of mind and long-term reliability.
+        </p>
+        <p>
+          For convenience, we provide nationwide doorstep delivery through our
+          dedicated courier service. Customers who prefer to collect their
+          vehicles in person are required to book a reservation in advance to
+          ensure a smooth pickup process.
+        </p>
+      </div>
+      {/* end of about us */}
+      <div className="contactUs">
+        <h2>Contact Us</h2>
+        <p className="address">873 TX-21, Cedar Creek, TX 78612</p>
+        <div className="contacts">
+          <a
+            href="https://wa.me/+1 3039443673"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <IoLogoWhatsapp />
+            <p>Whatsapp me</p>
+          </a>
+          <a href="mailto:">
+            <MdEmail />
+            <p>Email Me</p>
+          </a>
+          <a href="https://www.tiktok.com/@cheapcarforsellinusa0?_t=ZT-8yYVaqfpG3R&_r=1">
+            <SiTiktok />
+            <p>Tiktok</p>
+          </a>
+          <p className="copywrite">copywrite 2025</p>
+        </div>
+      </div>
     </div>
   );
 };
