@@ -18,6 +18,13 @@ const Home = () => {
   const service = document.querySelector(".service");
   const about = document.querySelector(".about");
 
+  const handlehome = () => {
+    const header = document.querySelector(".summaryCon");
+    if (header) {
+      header.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   const handleContactUs = () => {
     const contact = document.querySelector(".contactUs");
     if (contact) {
@@ -39,7 +46,7 @@ const Home = () => {
     <div>
       <div className="headerCon">
         <div className="header">
-          <div className="logoCon">
+          <div onClick={handlehome} className="logoCon">
             <Link to="/">
               {" "}
               <img className="logo" src={logo} alt="logo" />
