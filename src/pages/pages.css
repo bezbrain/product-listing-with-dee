@@ -49,6 +49,7 @@
 .headerLine {
   border: 0.5px solid rgb(184, 184, 184);
 }
+/* end of header */
 .summaryCon {
   padding: 50px 20px;
   background-color: rgb(231, 255, 233);
@@ -64,6 +65,7 @@
   font-weight: 700;
   text-transform: capitalize;
 }
+/* end of summary */
 .displayImg {
   position: relative;
 }
@@ -103,4 +105,8 @@
 .productLink {
   color: #009000;
   text-decoration: none;
+}
+/* end of display img */
+.service {
+  /* background-color: #1a1a1a; */
 }
