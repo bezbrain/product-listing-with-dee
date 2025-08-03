@@ -55,10 +55,14 @@ const Home = () => {
             great <br />
             <span>deal</span>
           </p>
-          <button className="productBtn">All Products</button>
+          <div className="productBtn">
+            {" "}
+            <Link className="productLink" to="/products">
+              All Products
+            </Link>
+          </div>
         </div>
       </div>
-      {/* <Link to="/products">Go to Product Page</Link> */}
     </div>
   );
 };
