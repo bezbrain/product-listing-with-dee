@@ -13,6 +13,12 @@ import { useState } from "react";
 const Products = () => {
   const [ismenu, setIsMenu] = useState<boolean>(false);
 
+  const handleContactUs = () => {
+    const contact = document.querySelector(".contactUs");
+    if (contact) {
+      contact.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   const handleScroll = () => {};
   return (
     <div>
@@ -25,8 +31,10 @@ const Products = () => {
             </Link>
           </div>
           <div className="headItem">
-            <button className="btn">Contact us</button>
-            <div className="menuIcon">
+            <button onClick={handleContactUs} className="btn">
+              Contact us
+            </button>
+            <div onClick={() => setIsMenu(true)} className="menuIcon">
               <FiMenu size={30} />
             </div>
           </div>

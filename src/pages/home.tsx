@@ -6,6 +6,7 @@ import { MdEmail } from "react-icons/md";
 import { SiTiktok } from "react-icons/si";
 import { MdClose } from "react-icons/md";
 import { FaHandshake } from "react-icons/fa";
+import { FaRegCopyright } from "react-icons/fa6";
 
 import logo from "../assets/logo-copy.png";
 import backimg from "../assets/images/background.png";
@@ -14,13 +15,25 @@ import { useState } from "react";
 const Home = () => {
   const [ismenu, setIsMenu] = useState<boolean>(false);
 
+  const service = document.querySelector(".service");
+  const about = document.querySelector(".about");
+
   const handleContactUs = () => {
     const contact = document.querySelector(".contactUs");
     if (contact) {
       contact.scrollIntoView({ behavior: "smooth" });
     }
   };
-  const handleScroll = () => {};
+  const handleScroll = (screen: string) => {
+    if (screen === "service" && service) {
+      setIsMenu(false);
+      service.scrollIntoView({ behavior: "smooth" });
+    }
+    if (screen === "about" && about) {
+      setIsMenu(false);
+      about.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <div>
@@ -55,10 +68,10 @@ const Home = () => {
               <FaHandshake color="#f6ff00ff" size={40} />
             </div>
             <div className="ppCon">
-              <p className="pp" onClick={() => handleScroll()}>
+              <p className="pp" onClick={() => handleScroll("service")}>
                 Our Service
               </p>
-              <p className="pp" onClick={() => handleScroll()}>
+              <p className="pp" onClick={() => handleScroll("about")}>
                 About Us
               </p>
               <Link className="pp" to="/products">
@@ -215,7 +228,10 @@ const Home = () => {
             <SiTiktok />
             <p>Tiktok</p>
           </a>
-          <p className="copywrite">copywrite 2025</p>
+          <div className="copywrite">
+            <p>copywrite 2025</p>
+            <FaRegCopyright />
+          </div>
         </div>
       </div>
     </div>
