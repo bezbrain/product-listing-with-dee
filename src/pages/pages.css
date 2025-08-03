@@ -42,7 +42,7 @@
   font-size: 18px;
   color: #ffffff;
 }
-.menuCon:hover {
+.menuIcon:hover {
   transition: 1s;
   transform: rotate(180deg);
 }
@@ -50,6 +50,74 @@
   border: 0.5px solid rgb(184, 184, 184);
 }
 /* end of header */
+
+.menuCon {
+  height: 100%;
+  width: 100%;
+  background-color: #2d2d2dff;
+  position: absolute;
+  top: 0;
+  padding: 20px;
+  color: #ffffff;
+  position: fixed;
+  z-index: 1000;
+}
+.closeCon {
+  background-color: inherit;
+  border: none;
+}
+.closeIcon {
+  font-size: 30px;
+  transition: 40s;
+  /* transition: transform 0.5s ease-in-out; */
+}
+.closeIcon:hover {
+  transform: rotate(90deg);
+}
+.meetMe {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  opacity: 0.6;
+  margin-bottom: -20px;
+}
+.pp {
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out;
+}
+.pp:hover {
+  margin-left: 5px;
+  font-weight: 600;
+  text-decoration: underline;
+}
+.modaline {
+  border: 1px solid white;
+}
+.linksCon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+/* a {
+  color: #ffffff;
+  text-decoration: none;
+  line-height: 0;
+  border: 0.5px solid red;
+} */
+/* .contactIcon {
+  font-size: 25px;
+  opacity: 0.6;
+} */
+/* a p {
+  border: 0.5px solid #717171;
+  padding: 10px 5px;
+  width: fit-content;
+  display: none;
+} */
+/* end of moda */
 .summaryCon {
   padding: 50px 20px;
   background-color: rgb(231, 255, 233);
@@ -150,6 +218,9 @@
   font-style: italic;
   opacity: 0.6;
   margin-bottom: 20px;
+}
+.contactUs h2 {
+  opacity: 0.7;
 }
 .contactUs a {
   display: flex;

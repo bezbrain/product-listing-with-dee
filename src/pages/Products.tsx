@@ -17,7 +17,7 @@ const Products = () => {
           </div>
           <div className="headItem">
             <button className="btn">Contact us</button>
-            <div className="menuCon">
+            <div className="menuIcon">
               <FiMenu size={30} />
             </div>
           </div>

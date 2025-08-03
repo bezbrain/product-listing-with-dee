@@ -4,11 +4,24 @@ import { FiMenu } from "react-icons/fi";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
 import { SiTiktok } from "react-icons/si";
+import { MdClose } from "react-icons/md";
+import { FaHandshake } from "react-icons/fa";
 
 import logo from "../assets/logo-copy.png";
 import backimg from "../assets/images/background.png";
+import { useState } from "react";
 
 const Home = () => {
+  const [ismenu, setIsMenu] = useState<boolean>(false);
+
+  const handleContactUs = () => {
+    const contact = document.querySelector(".contactUs");
+    if (contact) {
+      contact.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+  const handleScroll = () => {};
+
   return (
     <div>
       <div className="headerCon">
@@ -20,8 +33,10 @@ const Home = () => {
             </Link>
           </div>
           <div className="headItem">
-            <button className="btn">Contact us</button>
-            <div className="menuCon">
+            <button onClick={handleContactUs} className="btn">
+              Contact us
+            </button>
+            <div onClick={() => setIsMenu(true)} className="menuIcon">
               <FiMenu size={30} />
             </div>
           </div>
@@ -29,6 +44,50 @@ const Home = () => {
         <div className="headerLine"></div>
       </div>
       {/* end of header */}
+      {ismenu && (
+        <div className="menuCon">
+          <button onClick={() => setIsMenu(false)} className="closeCon">
+            <MdClose color="red" className="closeIcon" />
+          </button>
+          <div style={{ marginInline: "auto", width: "60%" }}>
+            <div className="meetMe">
+              <h1>Let Trade</h1>
+              <FaHandshake color="#f6ff00ff" size={40} />
+            </div>
+            <p className="pp" onClick={() => handleScroll()}>
+              Our Service
+            </p>
+            <p className="pp" onClick={() => handleScroll()}>
+              About Us
+            </p>
+            <Link className="productLink" to="/products">
+              All Products
+            </Link>
+
+            <div className="modaline"></div>
+
+            <div className="linksCon">
+              <a href="mailto:michaelwspence@gmail.com">
+                <MdEmail className="contactIcon" />
+                <p>E-mail Me</p>
+              </a>
+              <a
+                href="https://wa.me/+13039443673"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <IoLogoWhatsapp className="contactIcon" />
+                <p>Whatsapp Me</p>
+              </a>
+              <a href="https://www.tiktok.com/@cheapcarforsellinusa0?_t=ZT-8yYVaqfpG3R&_r=1">
+                <SiTiktok className="contactIcon" />
+                <p>Tiktok</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
+      {/* end of moda */}
       <div className="summaryCon">
         <h2>
           Welcome to Precisious Auto Sales <br />
@@ -139,14 +198,14 @@ const Home = () => {
         <p className="address">873 TX-21, Cedar Creek, TX 78612</p>
         <div className="contacts">
           <a
-            href="https://wa.me/+1 3039443673"
+            href="https://wa.me/+13039443673"
             target="_blank"
             rel="noopener noreferrer"
           >
             <IoLogoWhatsapp />
             <p>Whatsapp me</p>
           </a>
-          <a href="mailto:">
+          <a href="mailto:michaelwspence@gmail.com">
             <MdEmail />
             <p>Email Me</p>
           </a>
