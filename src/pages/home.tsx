@@ -51,18 +51,20 @@ const Home = () => {
           </button>
           <div style={{ marginInline: "auto", width: "60%" }}>
             <div className="meetMe">
-              <h1>Let Trade</h1>
+              <h1>Let Deal</h1>
               <FaHandshake color="#f6ff00ff" size={40} />
             </div>
-            <p className="pp" onClick={() => handleScroll()}>
-              Our Service
-            </p>
-            <p className="pp" onClick={() => handleScroll()}>
-              About Us
-            </p>
-            <Link className="productLink" to="/products">
-              All Products
-            </Link>
+            <div className="ppCon">
+              <p className="pp" onClick={() => handleScroll()}>
+                Our Service
+              </p>
+              <p className="pp" onClick={() => handleScroll()}>
+                About Us
+              </p>
+              <Link className="pp" to="/products">
+                All Products
+              </Link>
+            </div>
 
             <div className="modaline"></div>
 
