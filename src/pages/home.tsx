@@ -55,6 +55,7 @@ const Home = () => {
             great <br />
             <span>deal</span>
           </p>
+          <button className="productBtn">All Products</button>
         </div>
       </div>
       {/* <Link to="/products">Go to Product Page</Link> */}

@@ -77,16 +77,26 @@
 }
 .imgText {
   position: absolute;
-  top: 5%;
+  top: -20px;
   left: 30%;
   transform: translatey(-50%, -50%);
 }
 .imgText p {
-  font-size: 70px;
+  font-size: 60px;
+  font-weight: 700;
   line-height: 1.1;
   font-family: "Times New Roman", Times, serif;
   color: #ffffff;
+  text-align: center;
 }
 .imgText span {
   color: #009000;
+}
+.productBtn {
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #009000;
+  text-align: center;
 }
