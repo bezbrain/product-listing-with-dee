@@ -283,7 +283,13 @@ const Products = () => {
       navigate("/#service");
     }
   };
-  const handleScrollHome = () => {};
+  const handleScrollHome = () => {
+    const product = document.querySelector(".prodBody");
+    setIsMenu(false);
+    if (product) {
+      product.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <div>
       <div className="headerCon">
