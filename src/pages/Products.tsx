@@ -136,7 +136,7 @@ const Products = () => {
     {
       id: "6",
       image: image6,
-      details: "Luxury for Less!2022 Acura MDX SH-AWD w/Tech Pkg",
+      details: "2022 Acura MDX SH-AWD w/Tech Pkg",
       miles: "42,000",
       price: "$6000",
       deposite: "$800",
@@ -366,8 +366,10 @@ const Products = () => {
               <img className="carImg" src={each.image} alt="" />
               <h4 className="title">{each.details}</h4>
               <p className="miles">Miles: {each.miles}</p>
-              <p className="price">{each.price}</p>
-              <p className="deposit">Deposit: {each.deposite}</p>
+              <div className="priceCon">
+                <p className="price">{each.price}</p>
+                <p className="deposit">Deposit: {each.deposite}</p>
+              </div>
               <p className="stock">{each.instock}</p>
               <p className="warranty">{each.warranty}</p>
               <div className="discrpt">

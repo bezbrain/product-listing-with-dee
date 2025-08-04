@@ -280,3 +280,36 @@
   border-radius: 10px;
   /* border: 2px solid red; */
 }
+.title {
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+.miles {
+  margin-top: -10px;
+  font-size: 15px;
+  /* line-height: 1.2; */
+}
+.priceCon {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  width: 80%;
+  margin-block: -10px;
+}
+.price {
+  font-size: 18px;
+  font-weight: 700;
+  color: #da6d32;
+}
+.deposit {
+  font-weight: 600;
+}
+.stock {
+  /* line-height: 1; */
+  opacity: 0.6;
+}
+.warranty {
+  font-size: 14px;
+  font-style: italic;
+}
