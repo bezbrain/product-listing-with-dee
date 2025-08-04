@@ -271,13 +271,15 @@
   color: #009000;
 }
 .carCon {
-  margin-top: 50px;
+  margin: 20px 0px;
   line-height: 0;
+  border: 5px solid #da6d32;
+  border-radius: 10px;
 }
 .carImg {
   height: 300px;
   width: 100%;
-  border-radius: 10px;
+  border-radius: 5px 5px 10px 10px;
   /* border: 2px solid red; */
 }
 .title {
@@ -292,7 +294,7 @@
 .priceCon {
   display: flex;
   flex-direction: row;
-  align-content: center;
+  align-items: center;
   justify-content: space-between;
   width: 80%;
   margin-block: -10px;
@@ -312,4 +314,27 @@
 .warranty {
   font-size: 14px;
   font-style: italic;
+}
+.discrpt {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #cccccc;
+  height: 20px;
+  padding: 0px 10px;
+  border-radius: 5px;
+  /* margin-top: 30px; */
+}
+.discripCon {
+  border: 5px solid #cccccc;
+  padding: 0px 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+.discription {
+  line-height: 1.5;
+}
+.discripList {
+  line-height: 0.5;
 }

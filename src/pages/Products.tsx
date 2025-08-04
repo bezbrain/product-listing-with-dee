@@ -283,6 +283,7 @@ const Products = () => {
       navigate("/#service");
     }
   };
+  const handleScrollHome = () => {};
   return (
     <div>
       <div className="headerCon">
@@ -322,9 +323,9 @@ const Products = () => {
               <p className="pp" onClick={() => handleScroll("about")}>
                 About Us
               </p>
-              <Link className="pp" to="/products">
+              <p className="pp" onClick={handleScrollHome}>
                 All Products
-              </Link>
+              </p>
             </div>
 
             <div className="modaline"></div>
@@ -350,7 +351,6 @@ const Products = () => {
           </div>
         </div>
       )}
-
       {/* end of moda */}
 
       <div className="prodBody">
