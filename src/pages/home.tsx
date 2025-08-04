@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./pages.css";
 import { FiMenu } from "react-icons/fi";
 import { IoLogoWhatsapp } from "react-icons/io";
@@ -10,13 +10,15 @@ import { FaRegCopyright } from "react-icons/fa6";
 
 import logo from "../assets/logo-copy.png";
 import backimg from "../assets/images/background.png";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Home = () => {
   const [ismenu, setIsMenu] = useState<boolean>(false);
 
   const service = document.querySelector(".service");
   const about = document.querySelector(".about");
+
+  const location = useLocation();
 
   const handlehome = () => {
     const header = document.querySelector(".summaryCon");
@@ -41,6 +43,15 @@ const Home = () => {
       about.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
 
   return (
     <div>
@@ -150,7 +161,7 @@ const Home = () => {
         </div>
       </div>
       {/* end of display img */}
-      <div className="service">
+      <div id="service" className="service">
         <h1>Our Service</h1>
         <p>
           At Precisious, we make purchasing a vehicle simple, transparent, and
@@ -192,7 +203,7 @@ const Home = () => {
         </p>
       </div>
       {/* end of our service */}
-      <div className="about">
+      <div id="about" className="about">
         <h1>About Us</h1>
         <p>
           Precisious is a trusted automotive company specializing in clean title
@@ -215,7 +226,7 @@ const Home = () => {
         </p>
       </div>
       {/* end of about us */}
-      <div className="contactUs">
+      <div id="contactUs" className="contactUs">
         <h2>Contact Us</h2>
         <p className="address">873 TX-21, Cedar Creek, TX 78612</p>
         <div className="contacts">

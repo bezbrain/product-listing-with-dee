@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./pages.css";
 import { FiMenu } from "react-icons/fi";
 import { IoLogoWhatsapp } from "react-icons/io";
@@ -13,13 +13,22 @@ import { useState } from "react";
 const Products = () => {
   const [ismenu, setIsMenu] = useState<boolean>(false);
 
-  const handleContactUs = () => {
-    const contact = document.querySelector(".contactUs");
-    if (contact) {
-      contact.scrollIntoView({ behavior: "smooth" });
+  const navigate = useNavigate();
+
+  const handleScroll = (scroll: string) => {
+    if (scroll === "contact") {
+      navigate("/#contactUs");
+    }
+    if (scroll === "service") {
+      navigate("/#service");
+    }
+    if (scroll === "about") {
+      navigate("/#about");
+    }
+    if (scroll === "service") {
+      navigate("/#service");
     }
   };
-  const handleScroll = () => {};
   return (
     <div>
       <div className="headerCon">
@@ -31,7 +40,7 @@ const Products = () => {
             </Link>
           </div>
           <div className="headItem">
-            <button onClick={handleContactUs} className="btn">
+            <button onClick={() => handleScroll("contact")} className="btn">
               Contact us
             </button>
             <div onClick={() => setIsMenu(true)} className="menuIcon">
@@ -53,10 +62,10 @@ const Products = () => {
               <FaHandshake color="#f6ff00ff" size={40} />
             </div>
             <div className="ppCon">
-              <p className="pp" onClick={() => handleScroll()}>
+              <p className="pp" onClick={() => handleScroll("service")}>
                 Our Service
               </p>
-              <p className="pp" onClick={() => handleScroll()}>
+              <p className="pp" onClick={() => handleScroll("about")}>
                 About Us
               </p>
               <Link className="pp" to="/products">
