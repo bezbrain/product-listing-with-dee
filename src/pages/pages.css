@@ -248,3 +248,22 @@
   width: fit-content;
   margin-inline: auto;
 }
+
+/* Product page **** */
+
+.prodBody {
+  padding: 20px;
+}
+
+.exploy {
+  margin-top: 70px;
+  text-align: center;
+}
+.exploy h2 {
+  color: #009000;
+  /* margin-bottom: -10px; */
+  line-height: 0;
+}
+.exploy span {
+  color: #009000;
+}
