@@ -364,33 +364,39 @@ const Products = () => {
           return (
             <div className="carCon" key={each.id}>
               <img className="carImg" src={each.image} alt="" />
-              <h4>{each.details}</h4>
-              <p>Miles: {each.miles}</p>
-              <p>{each.price}</p>
-              <p>Deposit: {each.deposite}</p>
-              <p>{each.instock}</p>
-              <p>{each.warranty}</p>
-              <div>
+              <h4 className="title">{each.details}</h4>
+              <p className="miles">Miles: {each.miles}</p>
+              <p className="price">{each.price}</p>
+              <p className="deposit">Deposit: {each.deposite}</p>
+              <p className="stock">{each.instock}</p>
+              <p className="warranty">{each.warranty}</p>
+              <div className="discrpt">
                 <p>Discription</p>
                 <div onClick={() => setIsShow(!isShow)}>
                   {isShow && <FaChevronUp />}
                   {!isShow && <FaChevronDown />}
                 </div>
               </div>
-              <div>
-                <p>{each.detailes1}</p>
-                <p>{each.detailes2}</p>
-                <div>
-                  <p>{each.detailes3}</p>
-                  <p>{each.detailes4}</p>
-                  <p>{each.detailes5}</p>
-                  <p>{each.detailes6}</p>
-                  <p>{each.detailes7}</p>
-                  <p>{each.detailes8}</p>
-                  <p>{each.detailes9}</p>
-                  <p>{each.detailes10}</p>
+              {isShow && (
+                <div className="discripCon">
+                  <p className="discription">{each.detailes1}</p>
+                  <p className="discription">{each.detailes2}</p>
+                  <div className="discripList">
+                    <p>{each.detailes3}</p>
+                    <p>{each.detailes4}</p>
+                    <p>{each.detailes5}</p>
+                    <p>{each.detailes6}</p>
+                    <p>{each.detailes7}</p>
+                    <p>{each.detailes8}</p>
+                    <p>{each.detailes9}</p>
+                    <p>{each.detailes10}</p>
+                    <p> No additional miles</p>
+                    <p>2 keys</p>
+                    <p>A bill of sale</p>
+                    <p>A temporary tag</p>
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
           );
         })}
