@@ -6,8 +6,9 @@ import { MdEmail } from "react-icons/md";
 import { SiTiktok } from "react-icons/si";
 import { MdClose } from "react-icons/md";
 import { FaHandshake } from "react-icons/fa";
-import { type DataProp } from "../types/data-type";
+import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 
+import { type DataProp } from "../types/data-type";
 import logo from "../assets/logo-copy.png";
 import { useState } from "react";
 import image1 from "../assets/images/image1.jpeg";
@@ -264,6 +265,7 @@ const Products = () => {
   ];
 
   const [ismenu, setIsMenu] = useState<boolean>(false);
+  const [isShow, setIsShow] = useState<boolean>(false);
 
   const navigate = useNavigate();
 
@@ -366,6 +368,29 @@ const Products = () => {
               <p>Miles: {each.miles}</p>
               <p>{each.price}</p>
               <p>Deposit: {each.deposite}</p>
+              <p>{each.instock}</p>
+              <p>{each.warranty}</p>
+              <div>
+                <p>Discription</p>
+                <div onClick={() => setIsShow(!isShow)}>
+                  {isShow && <FaChevronUp />}
+                  {!isShow && <FaChevronDown />}
+                </div>
+              </div>
+              <div>
+                <p>{each.detailes1}</p>
+                <p>{each.detailes2}</p>
+                <div>
+                  <p>{each.detailes3}</p>
+                  <p>{each.detailes4}</p>
+                  <p>{each.detailes5}</p>
+                  <p>{each.detailes6}</p>
+                  <p>{each.detailes7}</p>
+                  <p>{each.detailes8}</p>
+                  <p>{each.detailes9}</p>
+                  <p>{each.detailes10}</p>
+                </div>
+              </div>
             </div>
           );
         })}
