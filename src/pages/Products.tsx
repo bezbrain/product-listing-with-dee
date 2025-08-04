@@ -10,12 +10,22 @@ import { type DataProp } from "../types/data-type";
 
 import logo from "../assets/logo-copy.png";
 import { useState } from "react";
+import image1 from "../assets/images/image1.jpeg";
+import image2 from "../assets/images/image2.jpeg";
+import image3 from "../assets/images/image3.jpeg";
+import image4 from "../assets/images/image4.jpeg";
+import image5 from "../assets/images/image5.jpeg";
+import image6 from "../assets/images/image6.jpeg";
+import image7 from "../assets/images/image7.jpeg";
+import image8 from "../assets/images/image8.jpeg";
+import image9 from "../assets/images/image9.jpeg";
+import image10 from "../assets/images/image10.jpeg";
 
 const Products = () => {
-  const data: DataProp = [
+  const data: DataProp[] = [
     {
       id: "1",
-      image: "2024 Lexus NX • 350",
+      image: image1,
       details: "2024 Lexus NX • 350",
       miles: "8,615",
       price: "$10,000",
@@ -36,7 +46,7 @@ const Products = () => {
     },
     {
       id: "2",
-      image: "2019 Lamborghini Aventador",
+      image: image2,
       details:
         "2019 Lamborghini Aventador SVJ Coupe 1 of 1 Matte Baby Blue from the factory",
       miles: "6,578",
@@ -58,8 +68,8 @@ const Products = () => {
       detailes10: "",
     },
     {
-      id: "2",
-      image: "2022 Dodge Charger",
+      id: "3",
+      image: image3,
       details: "2022 Dodge Charger, Scat Pack Sedan 4D",
       miles: "36,000",
       price: "$9000",
@@ -81,7 +91,7 @@ const Products = () => {
     },
     {
       id: "4",
-      image: "2015 AUDI A6 3.0",
+      image: image4,
       details: "2015 AUDI A6 3.0 QUATTRO TDI PRESTIGE S-LINE",
       miles: "136,558",
       price: "$6500",
@@ -102,7 +112,7 @@ const Products = () => {
     },
     {
       id: "5",
-      image: "2023 Chevrolet Blazer RS ",
+      image: image5,
       details: "2023 Chevrolet Blazer RS Sport Utility 4D",
       miles: "9,418",
       price: "$9000",
@@ -124,7 +134,7 @@ const Products = () => {
     },
     {
       id: "6",
-      image: "Acura MDX SH-AWD ",
+      image: image6,
       details: "Luxury for Less!2022 Acura MDX SH-AWD w/Tech Pkg",
       miles: "42,000",
       price: "$6000",
@@ -145,7 +155,7 @@ const Products = () => {
     },
     {
       id: "7",
-      image: "2018 Ford Mustang  CONVERTIBLE ",
+      image: image7,
       details: "2018 Ford Mustang Convertible ",
       miles: "58,000",
       price: "$7,700",
@@ -166,7 +176,7 @@ const Products = () => {
     },
     {
       id: "8",
-      image: "2021 Ram 1500 Crew",
+      image: image8,
       details: "2021 Ram 1500 Crew Cab • TRX Pickup 4D 5 1/2 ft",
       miles: "40,494 ",
       price: "$15,000",
@@ -188,7 +198,7 @@ const Products = () => {
     },
     {
       id: "9",
-      image: "2016 Ford Mustang",
+      image: image9,
       details:
         "2016 Mustang GT Premium Track Pack 5.0 Coyote, with a Roush Supercharger",
       miles: "56,000",
@@ -210,7 +220,7 @@ const Products = () => {
     },
     {
       id: "10",
-      image: "2024 RAM 3500",
+      image: image10,
       details:
         "2024 Dodge RAM • 3500 Big Horn 6.7L Cummins Turbo Diesel Engine",
       miles: "32,000",
@@ -338,7 +348,9 @@ const Products = () => {
           </div>
         </div>
       )}
+
       {/* end of moda */}
+
       <div className="prodBody">
         <div className="exploy">
           <h2>Exploy Our Products</h2>
@@ -346,6 +358,17 @@ const Products = () => {
             Like any product? <span>contact us</span>{" "}
           </p>
         </div>
+        {data.map((each) => {
+          return (
+            <div className="carCon" key={each.id}>
+              <img className="carImg" src={each.image} alt="" />
+              <h4>{each.details}</h4>
+              <p>Miles: {each.miles}</p>
+              <p>{each.price}</p>
+              <p>Deposit: {each.deposite}</p>
+            </div>
+          );
+        })}
       </div>
       {/* <Link to="/">Go to Home Page</Link> */}
     </div>

@@ -252,11 +252,11 @@
 /* Product page **** */
 
 .prodBody {
-  padding: 20px;
+  padding: 10px;
 }
 
 .exploy {
-  margin-top: 70px;
+  margin-top: 90px;
   text-align: center;
 }
 .exploy h2 {
@@ -266,4 +266,14 @@
 }
 .exploy span {
   color: #009000;
+}
+.carCon {
+  margin-top: 50px;
+  line-height: 0;
+}
+.carImg {
+  height: 300px;
+  width: 100%;
+  border-radius: 10px;
+  /* border: 2px solid red; */
 }
