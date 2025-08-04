@@ -92,6 +92,7 @@ const Home = () => {
               <p className="pp" onClick={() => handleScroll("about")}>
                 About Us
               </p>
+
               <Link className="pp" to="/products">
                 All Products
               </Link>

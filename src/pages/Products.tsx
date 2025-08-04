@@ -279,10 +279,8 @@ const Products = () => {
     if (scroll === "about") {
       navigate("/#about");
     }
-    if (scroll === "service") {
-      navigate("/#service");
-    }
   };
+
   const handleScrollHome = () => {
     const product = document.querySelector(".prodBody");
     setIsMenu(false);

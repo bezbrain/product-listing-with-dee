@@ -256,6 +256,7 @@
 
 .prodBody {
   padding: 10px;
+  scroll-behavior: initial;
 }
 
 .exploy {
