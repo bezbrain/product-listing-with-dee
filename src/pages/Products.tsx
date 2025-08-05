@@ -374,7 +374,7 @@ const Products = () => {
         {data.map((each) => {
           return (
             <div className="carCon" key={each.id}>
-              <div>
+              <div className="singleProduct">
                 <img className="carImg" src={each.image} alt="" />
                 <div className="carAboutCon">
                   <h4 className="title">{each.details}</h4>
