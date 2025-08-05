@@ -265,8 +265,8 @@ const Products = () => {
   ];
 
   const [ismenu, setIsMenu] = useState<boolean>(false);
-  const [isShow, setIsShow] = useState<boolean>(false);
-  const [id, setId] = useState<string | number>("");
+
+  const [id, setId] = useState<string | number | null>(null);
 
   const navigate = useNavigate();
 
@@ -291,8 +291,8 @@ const Products = () => {
   };
 
   const handleDisplay = (id: string | number) => {
-    setId(id);
-    setIsShow(!isShow);
+    setId((prev) => (prev === id ? null : id));
+    // setIsShow(!isShow);
   };
 
   return (
@@ -388,11 +388,10 @@ const Products = () => {
               <div className="discrpt">
                 <p>Discription</p>
                 <div onClick={() => handleDisplay(each.id)}>
-                  {id && isShow && <FaChevronUp />}
-                  {!isShow && <FaChevronDown />}
+                  {each.id === id ? <FaChevronUp /> : <FaChevronDown />}
                 </div>
               </div>
-              {each.id === id && isShow && (
+              {each.id === id && (
                 <div className="discripCon">
                   <p className="discription">{each.detailes1}</p>
                   <p className="discription">{each.detailes2}</p>
