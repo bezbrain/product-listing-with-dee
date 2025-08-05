@@ -368,14 +368,16 @@ const Products = () => {
           return (
             <div className="carCon" key={each.id}>
               <img className="carImg" src={each.image} alt="" />
-              <h4 className="title">{each.details}</h4>
-              <p className="miles">Miles: {each.miles}</p>
-              <div className="priceCon">
-                <p className="price">{each.price}</p>
-                <p className="deposit">Deposit: {each.deposite}</p>
+              <div className="carAboutCon">
+                <h4 className="title">{each.details}</h4>
+                <p className="miles">Miles: {each.miles}</p>
+                <div className="priceCon">
+                  <p className="price">{each.price}</p>
+                  <p className="deposit">Deposit: {each.deposite}</p>
+                </div>
+                <p className="stock">{each.instock}</p>
+                <p className="warranty">{each.warranty}</p>
               </div>
-              <p className="stock">{each.instock}</p>
-              <p className="warranty">{each.warranty}</p>
               <div className="discrpt">
                 <p>Discription</p>
                 <div onClick={() => setIsShow(!isShow)}>
