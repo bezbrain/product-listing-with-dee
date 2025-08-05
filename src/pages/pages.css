@@ -138,6 +138,7 @@
   font-weight: 700;
   text-transform: capitalize;
 }
+
 /* end of summary */
 .displayImg {
   position: relative;
@@ -179,6 +180,7 @@
   color: #009000;
   text-decoration: none;
 }
+
 /* end of display img */
 .service {
   padding: 20px;
@@ -341,4 +343,25 @@
 }
 .discripList {
   line-height: 0.5;
+}
+@media screen and (min-width: 500px) {
+  .imgCon {
+    height: 550px;
+  }
+  .carImg {
+    height: 350px;
+  }
+}
+@media screen and (min-width: 620px) {
+  .imgCon {
+    height: 600px;
+  }
+  .carImg {
+    height: 400px;
+  }
+}
+@media screen and (min-width: 720px) {
+  .imgCon {
+    height: auto;
+  }
 }
