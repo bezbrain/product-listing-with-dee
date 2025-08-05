@@ -30,7 +30,7 @@ const Products = () => {
       details: "2024 Lexus NX • 350",
       miles: "8,615",
       price: "$10,000",
-      deposite: "$1000",
+      deposite: "$1,000",
       instock: "Available",
       warranty: "2 Years Warranty",
       detailes1:
@@ -51,7 +51,7 @@ const Products = () => {
       details:
         "2019 Lamborghini Aventador SVJ Coupe 1 of 1 Matte Baby Blue from the factory",
       miles: "6,578",
-      price: "$9800",
+      price: "$9,800",
       deposite: "$800",
       instock: "Available",
       warranty: "2 Years Warranty",
@@ -73,7 +73,7 @@ const Products = () => {
       image: image3,
       details: "2022 Dodge Charger, Scat Pack Sedan 4D",
       miles: "36,000",
-      price: "$9000",
+      price: "$9,000",
       deposite: "$1000",
       instock: "Available",
       warranty: "2 Years Warranty",
@@ -95,7 +95,7 @@ const Products = () => {
       image: image4,
       details: "2015 AUDI A6 3.0 QUATTRO TDI PRESTIGE S-LINE",
       miles: "136,558",
-      price: "$6500",
+      price: "$6,500",
       deposite: "$500",
       instock: "Available",
       warranty: "2 Years Warranty",
@@ -116,8 +116,8 @@ const Products = () => {
       image: image5,
       details: "2023 Chevrolet Blazer RS Sport Utility 4D",
       miles: "9,418",
-      price: "$9000",
-      deposite: "$1000",
+      price: "$9,000",
+      deposite: "$1,000",
       instock: "Available",
       warranty: "2 Years Warranty",
       detailes1:
@@ -138,7 +138,7 @@ const Products = () => {
       image: image6,
       details: "2022 Acura MDX SH-AWD w/Tech Pkg",
       miles: "42,000",
-      price: "$6000",
+      price: "$6,000",
       deposite: "$800",
       instock: "Available",
       warranty: "2 Years Warranty",
@@ -226,7 +226,7 @@ const Products = () => {
         "2024 Dodge RAM • 3500 Big Horn 6.7L Cummins Turbo Diesel Engine",
       miles: "32,000",
       price: "$10,500",
-      deposite: "$1500",
+      deposite: "$1,500",
       instock: "Available",
       warranty: "2 Years Warranty",
       detailes1:
@@ -266,6 +266,7 @@ const Products = () => {
 
   const [ismenu, setIsMenu] = useState<boolean>(false);
   const [isShow, setIsShow] = useState<boolean>(false);
+  const [id, setId] = useState<string | number>("");
 
   const navigate = useNavigate();
 
@@ -288,6 +289,12 @@ const Products = () => {
       product.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  const handleDisplay = (id: string | number) => {
+    setId(id);
+    setIsShow(!isShow);
+  };
+
   return (
     <div>
       <div className="headerCon">
@@ -380,12 +387,12 @@ const Products = () => {
               </div>
               <div className="discrpt">
                 <p>Discription</p>
-                <div onClick={() => setIsShow(!isShow)}>
-                  {isShow && <FaChevronUp />}
+                <div onClick={() => handleDisplay(each.id)}>
+                  {id && isShow && <FaChevronUp />}
                   {!isShow && <FaChevronDown />}
                 </div>
               </div>
-              {isShow && (
+              {each.id === id && isShow && (
                 <div className="discripCon">
                   <p className="discription">{each.detailes1}</p>
                   <p className="discription">{each.detailes2}</p>
