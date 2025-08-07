@@ -74,7 +74,7 @@ const Products = () => {
       details: "2022 Dodge Charger, Scat Pack Sedan 4D",
       miles: "36,000",
       price: "$9,000",
-      deposite: "$1000",
+      deposite: "$1,000",
       instock: "Available",
       warranty: "2 Years Warranty",
       detailes1:
