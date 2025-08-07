@@ -69,10 +69,10 @@
 .closeIcon {
   font-size: 30px;
   transition: 40s;
-  /* transition: transform 0.5s ease-in-out; */
+  transition: transform 0.5s ease-in-out;
 }
 .closeIcon:hover {
-  transform: rotate(90deg);
+  transform: rotate(180deg);
 }
 .meetMe {
   display: flex;
